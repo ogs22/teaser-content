@@ -87,7 +87,9 @@ $image = drupal_render($variables['items'][0]);
 function _teaser_content_cvt($link,$text,$image) {
 
 $output= '
-<!-- CVT --><div class="campl-vertical-teaser campl-teaser">
+<!-- CVT -->
+<div class="campl-content-container campl-sub-column-left-border">
+<div class="campl-vertical-teaser campl-teaser">
 <div class="campl-content-container campl-vertical-teaser-img">
 <a href="' . $link .'" class="campl-teaser-img-link">
 ' . $image . ' </a></div>
@@ -103,12 +105,13 @@ $output= '
 
 
 function _teaser_content_col1() {
-	 $col1= '<div class="campl-column6 campl-main-content" style="min-height: 1200px;">';
+	 $col1= '<div class="campl-column9 campl-main-content" style="min-height: 1200px;">';
 	 return $col1;
 }
 
 function _teaser_content_col2() {
-	 $col2 = '<div class="campl-column3"><div class="campl-content-container campl-sub-column-left-border">';
+	 $col2 = '</div><!-- end col1 _col2 fn -->
+<div class="campl-column3">';
 	 return $col2;
 }
 
