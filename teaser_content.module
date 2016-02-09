@@ -13,8 +13,119 @@ function cambridge_theme_field__field_item_1_image($variables) {
 $link = $variables['element']['#object']->field_item_1_link['und'][0]['url'];
 $text = $variables['element']['#object']->field_item_1_text['und'][0][safe_value];
 $image = drupal_render($variables['items'][0]);
-      return _teaser_content_cht($link,$text,$image);
+
+      $output = _teaser_content_col1(); // need to close div...
+      $output .=  _teaser_content_cht($link,$text,$image);
+      return $output;
 }
+
+function cambridge_theme_field__field_item_2_image($variables) {
+
+$link = $variables['element']['#object']->field_item_2_link['und'][0]['url'];
+$text = $variables['element']['#object']->field_item_2_text['und'][0][safe_value];
+$image = drupal_render($variables['items'][0]);
+
+      $output =  _teaser_content_cht($link,$text,$image);
+      return $output;
+}
+
+
+function cambridge_theme_field__field_item_3_image($variables) {
+
+$link = $variables['element']['#object']->field_item_3_link['und'][0]['url'];
+$text = $variables['element']['#object']->field_item_3_text['und'][0][safe_value];
+$image = drupal_render($variables['items'][0]);
+
+      $output =  _teaser_content_cht($link,$text,$image);
+      $output .= '</div>'; // close div from item 1
+      return $output;
+}
+
+
+function cambridge_theme_field__field_item_4_image($variables) {
+
+$link = $variables['element']['#object']->field_item_4_link['und'][0]['url'];
+$text = $variables['element']['#object']->field_item_4_text['und'][0][safe_value];
+$image = drupal_render($variables['items'][0]);
+
+      $output =	_teaser_content_col2();	// need	to close div...
+      $output .=  _teaser_content_cvt($link,$text,$image);
+      $output .= _teaser_content_divider_lb();
+      return $output;
+}
+
+function cambridge_theme_field__field_item_5_image($variables) {
+
+$link = $variables['element']['#object']->field_item_5_link['und'][0]['url'];
+$text = $variables['element']['#object']->field_item_5_text['und'][0][safe_value];
+$image = drupal_render($variables['items'][0]);
+
+      $output =  _teaser_content_cvt($link,$text,$image);
+      $output .= _teaser_content_divider_lb();
+      return $output;
+}
+
+
+function cambridge_theme_field__field_item_6_image($variables) {
+
+$link = $variables['element']['#object']->field_item_6_link['und'][0]['url'];
+$text = $variables['element']['#object']->field_item_6_text['und'][0][safe_value];
+$image = drupal_render($variables['items'][0]);
+
+      $output =  _teaser_content_cvt($link,$text,$image);
+      $output .= '</div></div>';
+      return $output;
+}
+
+
+
+
+
+
+
+function _teaser_content_cvt($link,$text,$image) {
+
+$output= '<div class="campl-vertical-teaser campl-teaser">
+<div class="campl-content-container campl-vertical-teaser-img">
+<a href="' . $link .'" class="campl-teaser-img-link">
+' . $image . ' </a></div>
+</div>
+<div class="campl-content-container campl-vertical-teaser-txt">
+<a href="' . $link .'">' . $text .'
+<a href="' . $link .'" class="campl-primary-cta">Read more</a></div></div> ';
+
+  return $output;
+}
+
+
+
+function _teaser_content_col1() {
+	 $col1= '<div class="campl-column6 campl-main-content" style="min-height: 1200px;">';
+	 return $col1;
+}
+
+function _teaser_content_col2() {
+	 $col2 = '<div class="campl-column3"><div class="campl-content-container campl-sub-column-left-border">';
+	 return $col2;
+}
+
+function _teaser_content_divider_lb() {
+	 $div ='<div class="campl-column12">
+<div class="campl-side-padding campl-content-container campl-sub-column-left-border">
+<hr class="campl-teaser-divider">
+</div>
+</div>';
+
+	return $div;
+}
+
+function _teaser_content_divider() {
+
+     $div = '<div class="campl-column12">div class="campl-side-padding campl-content-container"><hr class="campl-teaser-divider"</div></div>';
+     return $div;
+
+}
+
 
 
 function _teaser_content_cht($link,$text,$image) {
@@ -24,7 +135,7 @@ $output= '<div class="campl-column6">
 <a href="' . $link .'" class="campl-teaser-img-link">
 ' . $image . ' </a></div>
 </div>
-<div class="campl-column6"><div class="campl-content-container campl-horizontal-teaser-txt"><h3 class="campl-teaser-title">
+<div class="campl-column6"><div class="campl-content-container campl-horizontal-teaser-txt">
 <a href="' . $link .'">' . $text .'
 <a href="' . $link .'" class="campl-primary-cta">Read more</a></div></div> ';
 
