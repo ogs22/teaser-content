@@ -21,4 +21,3 @@ function teaser_content_node_info() {
   drupal_alter('node_info', $items);
   return $items;
 }
-
