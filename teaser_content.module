@@ -16,16 +16,17 @@ $image = drupal_render($variables['items'][0]);
 
       $output = _teaser_content_col1(); // need to close div...
       $output .=  _teaser_content_cht($link,$text,$image);
+      $output .= _teaser_content_divider();
       return $output;
 }
 
 function cambridge_theme_field__field_item_2_image($variables) {
-
 $link = $variables['element']['#object']->field_item_2_link['und'][0]['url'];
 $text = $variables['element']['#object']->field_item_2_text['und'][0][safe_value];
 $image = drupal_render($variables['items'][0]);
 
       $output =  _teaser_content_cht($link,$text,$image);
+      $output .= _teaser_content_divider();
       return $output;
 }
 
@@ -37,7 +38,7 @@ $text = $variables['element']['#object']->field_item_3_text['und'][0][safe_value
 $image = drupal_render($variables['items'][0]);
 
       $output =  _teaser_content_cht($link,$text,$image);
-      $output .= '</div>'; // close div from item 1
+      $output .= '</div></div>'; // close div from item 1
       return $output;
 }
 
@@ -73,7 +74,7 @@ $text = $variables['element']['#object']->field_item_6_text['und'][0][safe_value
 $image = drupal_render($variables['items'][0]);
 
       $output =  _teaser_content_cvt($link,$text,$image);
-      $output .= '</div></div>';
+      $output .= '</div>';
       return $output;
 }
 
@@ -85,14 +86,16 @@ $image = drupal_render($variables['items'][0]);
 
 function _teaser_content_cvt($link,$text,$image) {
 
-$output= '<div class="campl-vertical-teaser campl-teaser">
+$output= '
+<!-- CVT --><div class="campl-vertical-teaser campl-teaser">
 <div class="campl-content-container campl-vertical-teaser-img">
 <a href="' . $link .'" class="campl-teaser-img-link">
 ' . $image . ' </a></div>
 </div>
 <div class="campl-content-container campl-vertical-teaser-txt">
 <a href="' . $link .'">' . $text .'
-<a href="' . $link .'" class="campl-primary-cta">Read more</a></div></div> ';
+<a href="' . $link .'" class="campl-primary-cta">Read more</a></div></div>
+<!-- end CVT -->';
 
   return $output;
 }
@@ -121,7 +124,10 @@ function _teaser_content_divider_lb() {
 
 function _teaser_content_divider() {
 
-     $div = '<div class="campl-column12">div class="campl-side-padding campl-content-container"><hr class="campl-teaser-divider"</div></div>';
+     $div = '
+<!-- _teaser_content_divider() -->
+<div class="campl-column12"><div class="campl-side-padding campl-content-container"><hr class="campl-teaser-divider"</div></div>
+<!-- end _teaser_content_divider() -->';
      return $div;
 
 }
@@ -130,14 +136,18 @@ function _teaser_content_divider() {
 
 function _teaser_content_cht($link,$text,$image) {
 
-$output= '<div class="campl-column6">
+$output= '
+<!-- CHT -->
+<div class="campl-content-container">
+<div class="campl-column6">
 <div class="campl-content-container campl-horizontal-teaser-img">
 <a href="' . $link .'" class="campl-teaser-img-link">
 ' . $image . ' </a></div>
 </div>
 <div class="campl-column6"><div class="campl-content-container campl-horizontal-teaser-txt">
 <a href="' . $link .'">' . $text .'
-<a href="' . $link .'" class="campl-primary-cta">Read more</a></div></div> ';
+<a href="' . $link .'" class="campl-primary-cta">Read more</a></div></div></div>
+<!-- end CHT -->';
 
   return $output;
 }

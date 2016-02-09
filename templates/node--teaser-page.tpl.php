@@ -1,4 +1,3 @@
-Hello WORLD!
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php print $user_picture; ?>
@@ -14,20 +13,6 @@ Hello WORLD!
   $comments = render($content['comments']);
   $links = render($content['links']);
 
-  // See if the first visible item is an image field. If it is, output it outside of the campl-content-container so that
-  // it appears as a leading image.
-  foreach ($content as $key => $value) {
-    if (
-      (FALSE === isset($value['#printed']) || FALSE == $value['#printed'])
-      &&
-      (FALSE === isset($value['#access']) || TRUE == $value['#access'])
-    ) {
-      if (isset($value['#field_type']) && $value['#field_type'] === 'image') {
-        print render($content[$key]);
-      }
-      break;
-    }
-  }
   ?>
 
   <?php if (($rendered_content = render($content)) || $display_submitted): ?>
