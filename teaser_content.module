@@ -38,7 +38,8 @@ $text = $variables['element']['#object']->field_item_3_text['und'][0][safe_value
 $image = drupal_render($variables['items'][0]);
 
       $output =  _teaser_content_cht($link,$text,$image);
-      $output .= '</div></div>'; // close div from item 1
+      $output .= _teaser_content_divider();
+
       return $output;
 }
 
@@ -49,9 +50,9 @@ $link = $variables['element']['#object']->field_item_4_link['und'][0]['url'];
 $text = $variables['element']['#object']->field_item_4_text['und'][0][safe_value];
 $image = drupal_render($variables['items'][0]);
 
-      $output =	_teaser_content_col2();	// need	to close div...
-      $output .=  _teaser_content_cvt($link,$text,$image);
-      $output .= _teaser_content_divider_lb();
+
+      $output =  _teaser_content_cht($link,$text,$image);
+      $output .= '</div></div></div>'; // close div from item 1
       return $output;
 }
 
@@ -61,7 +62,8 @@ $link = $variables['element']['#object']->field_item_5_link['und'][0]['url'];
 $text = $variables['element']['#object']->field_item_5_text['und'][0][safe_value];
 $image = drupal_render($variables['items'][0]);
 
-      $output =  _teaser_content_cvt($link,$text,$image);
+      $output =	_teaser_content_col2();	// need	to close div...
+      $output .=  _teaser_content_cvt($link,$text,$image);
       $output .= _teaser_content_divider_lb();
       return $output;
 }
@@ -149,7 +151,7 @@ $output= '
 </div>
 <div class="campl-column6"><div class="campl-content-container campl-horizontal-teaser-txt">
 <a href="' . $link .'">' . $text .'
-<a href="' . $link .'" class="campl-primary-cta">Read more</a></div></div></div>
+</a><a href="' . $link .'" class="campl-primary-cta">Read more</a></div></div></div>
 <!-- end CHT -->';
 
   return $output;
