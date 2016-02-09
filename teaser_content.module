@@ -9,8 +9,28 @@ include_once 'teaser_content.features.inc';
 
 
 function cambridge_theme_field__field_item_1_image($variables) {
- echo "FOOBAR";
+
+$link = $variables['element']['#object']->field_item_1_link['und'][0]['url'];
+$text = $variables['element']['#object']->field_item_1_text['und'][0][safe_value];
+$image = drupal_render($variables['items'][0]);
+      return _teaser_content_cht($link,$text,$image);
 }
+
+
+function _teaser_content_cht($link,$text,$image) {
+
+$output= '<div class="campl-column6">
+<div class="campl-content-container campl-horizontal-teaser-img">
+<a href="' . $link .'" class="campl-teaser-img-link">
+' . $image . ' </a></div>
+</div>
+<div class="campl-column6"><div class="campl-content-container campl-horizontal-teaser-txt"><h3 class="campl-teaser-title">
+<a href="' . $link .'">' . $text .'
+<a href="' . $link .'" class="campl-primary-cta">Read more</a></div></div> ';
+
+  return $output;
+}
+
 
 
 
