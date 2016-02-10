@@ -172,13 +172,13 @@ function teaser_content_theme_registry_alter(&$theme_registry) {
 	$theme    = str_replace('-', '_', $template);
 	list($base_theme, $specific) = explode('__', $theme, 2);
 
-
+	$var = (isset($theme_registry[$base_theme]['variables']) ? $theme_registry[$base_theme]['variables'] : false);
 	// Don't override base theme.
 	if (!empty($specific) && isset($theme_registry[$base_theme])) {
 	  $theme_info = array(
 		'template'   => $template,
 		'path'       => drupal_dirname($file->uri),
-		'variables'  => $theme_registry[$base_theme]['variables'],
+		'variables'  => $var,
 		'base hook'  => $base_theme,
 		// Other available value: theme_engine.
 		'type'       => 'module',

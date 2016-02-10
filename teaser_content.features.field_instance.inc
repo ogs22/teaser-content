@@ -69,7 +69,7 @@ function teaser_content_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'alt_field' => 0,
-      'default_image' => 0,
+      'default_image' => 363,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'imagecrop' => array(
