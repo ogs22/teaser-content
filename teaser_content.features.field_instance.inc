@@ -66,7 +66,7 @@ function teaser_content_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_item_1_image',
     'label' => 'Item 1 image',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -74,6 +74,7 @@ function teaser_content_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'imagecrop' => array(
         'carousel' => 0,
+        'fp_view' => 0,
         'inline' => 0,
         'leading' => 0,
         'sidebar_teaser' => 0,
@@ -94,6 +95,7 @@ function teaser_content_field_default_field_instances() {
           'public' => 'public',
         ),
         'allowed_types' => array(
+          0 => 0,
           'audio' => 0,
           'default' => 0,
           'image' => 'image',
@@ -329,6 +331,7 @@ function teaser_content_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'imagecrop' => array(
         'carousel' => 0,
+        'fp_view' => 0,
         'inline' => 0,
         'leading' => 0,
         'sidebar_teaser' => 0,
@@ -825,7 +828,7 @@ function teaser_content_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_item_4_image',
     'label' => 'item 4 image',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -833,6 +836,7 @@ function teaser_content_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'imagecrop' => array(
         'carousel' => 0,
+        'fp_view' => 0,
         'inline' => 0,
         'leading' => 0,
         'sidebar_teaser' => 0,
@@ -1077,7 +1081,7 @@ function teaser_content_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_item_5_image',
     'label' => 'item 5 image',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -1085,6 +1089,7 @@ function teaser_content_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'imagecrop' => array(
         'carousel' => 0,
+        'fp_view' => 0,
         'inline' => 0,
         'leading' => 0,
         'sidebar_teaser' => 0,
@@ -1329,7 +1334,7 @@ function teaser_content_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_item_6_image',
     'label' => 'item 6 image',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
