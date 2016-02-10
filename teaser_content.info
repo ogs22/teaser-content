@@ -1,5 +1,5 @@
 name = portal-content
-description = this produces the pages which have many links to stuff
+description = Adds a teaser-content type for producing portal style pages
 core = 7.x
 package = Features
 version = 7.x-1.0-latest
