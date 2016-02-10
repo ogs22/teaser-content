@@ -11,7 +11,7 @@ include_once 'teaser_content.features.inc';
 function cambridge_theme_field__field_item_1_image($variables) {
 
 $link = $variables['element']['#object']->field_item_1_link['und'][0]['url'];
-$text = $variables['element']['#object']->field_item_1_text['und'][0][safe_value];
+$text = $variables['element']['#object']->field_item_1_text['und'][0]['safe_value'];
 $image = drupal_render($variables['items'][0]);
 
       $output = _teaser_content_col1(); // need to close div...
@@ -22,7 +22,7 @@ $image = drupal_render($variables['items'][0]);
 
 function cambridge_theme_field__field_item_2_image($variables) {
 $link = $variables['element']['#object']->field_item_2_link['und'][0]['url'];
-$text = $variables['element']['#object']->field_item_2_text['und'][0][safe_value];
+$text = $variables['element']['#object']->field_item_2_text['und'][0]['safe_value'];
 $image = drupal_render($variables['items'][0]);
 
       $output =  _teaser_content_cht($link,$text,$image);
@@ -34,7 +34,7 @@ $image = drupal_render($variables['items'][0]);
 function cambridge_theme_field__field_item_3_image($variables) {
 
 $link = $variables['element']['#object']->field_item_3_link['und'][0]['url'];
-$text = $variables['element']['#object']->field_item_3_text['und'][0][safe_value];
+$text = $variables['element']['#object']->field_item_3_text['und'][0]['safe_value'];
 $image = drupal_render($variables['items'][0]);
 
       $output =  _teaser_content_cht($link,$text,$image);
@@ -47,7 +47,7 @@ $image = drupal_render($variables['items'][0]);
 function cambridge_theme_field__field_item_4_image($variables) {
 
 $link = $variables['element']['#object']->field_item_4_link['und'][0]['url'];
-$text = $variables['element']['#object']->field_item_4_text['und'][0][safe_value];
+$text = $variables['element']['#object']->field_item_4_text['und'][0]['safe_value'];
 $image = drupal_render($variables['items'][0]);
 
 
@@ -59,7 +59,7 @@ $image = drupal_render($variables['items'][0]);
 function cambridge_theme_field__field_item_5_image($variables) {
 
 $link = $variables['element']['#object']->field_item_5_link['und'][0]['url'];
-$text = $variables['element']['#object']->field_item_5_text['und'][0][safe_value];
+$text = $variables['element']['#object']->field_item_5_text['und'][0]['safe_value'];
 $image = drupal_render($variables['items'][0]);
 
       $output =	_teaser_content_col2();	// need	to close div...
@@ -72,7 +72,7 @@ $image = drupal_render($variables['items'][0]);
 function cambridge_theme_field__field_item_6_image($variables) {
 
 $link = $variables['element']['#object']->field_item_6_link['und'][0]['url'];
-$text = $variables['element']['#object']->field_item_6_text['und'][0][safe_value];
+$text = $variables['element']['#object']->field_item_6_text['und'][0]['safe_value'];
 $image = drupal_render($variables['items'][0]);
 
       $output =  _teaser_content_cvt($link,$text,$image);

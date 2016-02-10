@@ -1,4 +1,4 @@
-name = Teaser-content
+name = portal-content
 description = this produces the pages which have many links to stuff
 core = 7.x
 package = Features

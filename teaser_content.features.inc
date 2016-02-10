@@ -10,7 +10,7 @@
 function teaser_content_node_info() {
   $items = array(
     'teaser_page' => array(
-      'name' => t('Teaser page'),
+      'name' => t('Portal page'),
       'base' => 'node_content',
       'description' => t('Use this page if you need a portal type page linking to many other pages
 Requires at least 4 pieces of content to work properly max 6
