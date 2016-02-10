@@ -10,6 +10,76 @@
 function teaser_content_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-teaser_page-field_intro_text'.
+  $field_instances['node-teaser_page-field_intro_text'] = array(
+    'bundle' => 'teaser_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'carousel_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'focus_on_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'news_listing_item' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'sidebar_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'vertical_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_intro_text',
+    'label' => 'intro text',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'node-teaser_page-field_item_1_image'.
   $field_instances['node-teaser_page-field_item_1_image'] = array(
     'bundle' => 'teaser_page',
@@ -30,7 +100,7 @@ function teaser_content_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -66,10 +136,10 @@ function teaser_content_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_item_1_image',
     'label' => 'Item 1 image',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
-      'default_image' => 363,
+      'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'imagecrop' => array(
@@ -104,7 +174,7 @@ function teaser_content_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 41,
+      'weight' => 5,
     ),
   );
 
@@ -125,7 +195,7 @@ function teaser_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -190,7 +260,7 @@ function teaser_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 43,
+      'weight' => 7,
     ),
   );
 
@@ -215,7 +285,7 @@ function teaser_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -263,7 +333,7 @@ function teaser_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 42,
+      'weight' => 6,
     ),
   );
 
@@ -287,7 +357,7 @@ function teaser_content_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -361,7 +431,7 @@ function teaser_content_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 44,
+      'weight' => 8,
     ),
   );
 
@@ -382,7 +452,7 @@ function teaser_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -447,7 +517,7 @@ function teaser_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 46,
+      'weight' => 10,
     ),
   );
 
@@ -468,7 +538,7 @@ function teaser_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -516,7 +586,7 @@ function teaser_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 45,
+      'weight' => 9,
     ),
   );
 
@@ -540,7 +610,7 @@ function teaser_content_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -613,7 +683,7 @@ function teaser_content_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 47,
+      'weight' => 11,
     ),
   );
 
@@ -634,7 +704,7 @@ function teaser_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -699,7 +769,7 @@ function teaser_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 49,
+      'weight' => 13,
     ),
   );
 
@@ -720,7 +790,7 @@ function teaser_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -768,7 +838,7 @@ function teaser_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 48,
+      'weight' => 12,
     ),
   );
 
@@ -792,7 +862,7 @@ function teaser_content_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -828,7 +898,7 @@ function teaser_content_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_item_4_image',
     'label' => 'item 4 image',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -866,7 +936,7 @@ function teaser_content_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 50,
+      'weight' => 14,
     ),
   );
 
@@ -887,7 +957,7 @@ function teaser_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -952,7 +1022,7 @@ function teaser_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 52,
+      'weight' => 16,
     ),
   );
 
@@ -973,7 +1043,7 @@ function teaser_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -1021,7 +1091,7 @@ function teaser_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 51,
+      'weight' => 15,
     ),
   );
 
@@ -1045,7 +1115,7 @@ function teaser_content_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -1081,7 +1151,7 @@ function teaser_content_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_item_5_image',
     'label' => 'item 5 image',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -1119,7 +1189,7 @@ function teaser_content_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 53,
+      'weight' => 17,
     ),
   );
 
@@ -1140,7 +1210,7 @@ function teaser_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -1205,7 +1275,7 @@ function teaser_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 55,
+      'weight' => 19,
     ),
   );
 
@@ -1226,7 +1296,7 @@ function teaser_content_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -1274,7 +1344,7 @@ function teaser_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 54,
+      'weight' => 18,
     ),
   );
 
@@ -1298,7 +1368,7 @@ function teaser_content_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -1334,7 +1404,7 @@ function teaser_content_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_item_6_image',
     'label' => 'item 6 image',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -1372,7 +1442,7 @@ function teaser_content_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 56,
+      'weight' => 20,
     ),
   );
 
@@ -1393,7 +1463,7 @@ function teaser_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 18,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -1458,7 +1528,7 @@ function teaser_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 58,
+      'weight' => 22,
     ),
   );
 
@@ -1479,7 +1549,7 @@ function teaser_content_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 17,
       ),
       'focus_on_teaser' => array(
         'label' => 'above',
@@ -1527,7 +1597,7 @@ function teaser_content_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 57,
+      'weight' => 21,
     ),
   );
 
@@ -1536,6 +1606,7 @@ function teaser_content_field_default_field_instances() {
   t('316px * 316px');
   t('Item 1 image');
   t('Item 2 image');
+  t('intro text');
   t('item 1 link');
   t('item 1 text');
   t('item 2 link');
