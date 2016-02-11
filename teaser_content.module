@@ -146,11 +146,11 @@ $output= '
 <div class="campl-content-container">
 <div class="campl-column6">
 <div class="campl-content-container campl-horizontal-teaser-img">
-<a href="' . $link .'" class="campl-teaser-img-link">
+<a href="' . $link .'" class="campl-teaser-img-link" style="margin-bottom:20px;;">
 ' . $image . ' </a></div>
 </div>
 <div class="campl-column6"><div class="campl-content-container campl-horizontal-teaser-txt">
-'. $text .' <a href="' . $link .'" class="campl-primary-cta">Read more</a></div></div></div>
+'. $text .' <a href="' . $link .'" class="campl-primary-cta" style="margin-bottom: 10px;">Read more</a></div></div></div>
 <!-- end CHT -->';
 
   return $output;
