@@ -81,7 +81,12 @@ $image = drupal_render($variables['items'][0]);
 }
 
 
-
+function cambridge_theme_field__field_footer($variables) {
+      $text = '<div class="campl-content-container" style="clear:left;">';
+      $text .= drupal_render($variables['items'][0]);
+      $text .='</div></div>';
+      return $text;
+}
 
 
 
@@ -107,7 +112,8 @@ $output= '
 
 
 function _teaser_content_col1() {
-	 $col1= '<div class="campl-column9 campl-main-content" style="min-height: 1200px;">';
+	 $col1= '<div class="campl-main-content">
+<div class="campl-column9">';
 	 return $col1;
 }
 
