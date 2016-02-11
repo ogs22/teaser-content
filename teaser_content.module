@@ -137,7 +137,7 @@ function _teaser_content_divider() {
 
      $div = '
 <!-- _teaser_content_divider() -->
-<div class="campl-column12"><div class="campl-side-padding campl-content-container"><hr class="campl-teaser-divider"</div></div>
+<div class="campl-column12"><div class="campl-side-padding campl-content-container"><hr class="campl-teaser-divider"></div>
 <!-- end _teaser_content_divider() -->';
      return $div;
 
