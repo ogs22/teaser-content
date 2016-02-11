@@ -97,7 +97,7 @@ $output= '
 ' . $image . ' </a></div>
 </div>
 <div class="campl-content-container campl-vertical-teaser-txt">
-<a href="' . $link .'">' . $text .'
+' . $text .'
 <a href="' . $link .'" class="campl-primary-cta">Read more</a></div></div>
 <!-- end CVT -->';
 
@@ -150,8 +150,7 @@ $output= '
 ' . $image . ' </a></div>
 </div>
 <div class="campl-column6"><div class="campl-content-container campl-horizontal-teaser-txt">
-<a href="' . $link .'">' . $text .'
-</a><a href="' . $link .'" class="campl-primary-cta">Read more</a></div></div></div>
+'. $text .' <a href="' . $link .'" class="campl-primary-cta">Read more</a></div></div></div>
 <!-- end CHT -->';
 
   return $output;
